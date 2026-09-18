@@ -1,0 +1,18 @@
+cat log.txt | grep -i "ERROR" | wc -l
+# cat log.txt  Прочитать файли txt 
+| grep -i "ERROR"   Получить то что слева (То есть трочки txt файла), найти (grep) не учитывая регистр (-i) Error
+| wc -l   Посчитать кол-во строчкек
+
+cat log.txt | grep -i "WARNING" | wc -l
+Аналогично с прошлым кодом, ничего не поменялось, только ищем теперь Warning
+
+cat log.txt | grep -i "ERROR" | tail -n 5 
+# Получаем строки Error
+С конца (tail) вывести 5 последних (-n 5)  
+
+grep -i "ERROR" log.txt > errors.txt
+# Получаем строчки с Error
+> errors.txt   Записываем в txt эти строчки (Тк нет файла txt он создаётся)
+
+grep -i "WARNING" log.txt >> errors.txt
+# Записываем в конец txt строчки с Warning (>>)
