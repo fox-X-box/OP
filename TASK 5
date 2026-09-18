@@ -1,0 +1,17 @@
+mkdir -p ~/bin
+# Создём папку (mkdir) и не ругаемся, если он ауже есть (-p)
+
+nano ~/bin/biggest
+#Делаем скрипт, пишем внутрь (ls -lhS | head -n 10) <<---  head берёт первые 10 подготовленных строк 
+
+chmod +x ~/bin/biggest
+#chmod  изменить права доступа к файлу
++x  добавить право на выполнение
+
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc
+#Вводим в ~/.zshrc    -->   'export PATH="$HOME/bin:$PATH"' (добавляем в PATH наш скрипт, через export делаем доступным оболочке
+
+source ~/.zshrc Принимаем изменения
+
+biggest проверить что работает
+
